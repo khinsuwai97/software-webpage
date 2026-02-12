@@ -1,0 +1,215 @@
+/* =============================================================
+   queries.css — IronPDF for C++ Landing Page
+   Mobile-first responsive overrides only.
+   All base styles live in style.css.
+
+   Breakpoints (matching Bootstrap 5 grid):
+     sm  ≥ 576px
+     md  ≥ 768px
+     lg  ≥ 992px
+     xl  ≥ 1200px
+     xxl ≥ 1400px
+   ============================================================= */
+
+/* -------------------------------------------------------------
+   XL and above (≥ 1200px)
+   Fine-tune spacing and type scale on large screens
+   ------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .hero {
+    padding: 5rem 0 0;
+  }
+
+  .features-section,
+  .why-section,
+  .early-access-section {
+    padding: 6rem 0;
+  }
+}
+
+/* -------------------------------------------------------------
+   LG — Tablet landscape / small desktop (992px – 1199px)
+   Two-column layout is active. Minor spacing tweaks only.
+   ------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .hero-image {
+    max-width: 400px;
+    right: -20px;
+  }
+}
+
+/* -------------------------------------------------------------
+   MD — Tablet portrait (768px – 991px)
+   Columns begin to collapse; nav burger appears.
+   ------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .hero-image-wrap {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .hero-image {
+    max-width: 350px;
+    right: 0;
+    top: 0;
+  }
+
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  /* "Coming Soon" badge tucks in closer */
+  .badge-coming-soon {
+    right: -55px;
+  }
+
+  /* Why section: icon group adds bottom margin before content */
+  .why-icon-group {
+    margin-bottom: 2rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   SM — Mobile landscape / large phones (576px – 767px)
+   Single-column layout. Forms stack vertically.
+   ------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Hero */
+  .hero {
+    padding: 2rem 0 2rem;
+  }
+
+  /* Hero image stacks below text */
+  .hero-image {
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  /* Signup form: stack input above button */
+  .signup-form {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 12px;
+    height: auto;
+  }
+  .signup-form .form-control {
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  .signup-form .btn-signup {
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Features: left-align list items instead of centred row */
+  .feature-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-left: 1rem;
+  }
+
+  /* Product cards: full-width single column */
+  .product-cards {
+    flex-direction: column;
+  }
+  .product-card {
+    flex: unset;
+    width: 100%;
+  }
+
+  /* "Coming Soon" badge: pull out of absolute flow */
+  .badge-coming-soon {
+    position: static;
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+}
+
+/* -------------------------------------------------------------
+   XS — Small mobile (< 576px)
+   Tightest layout. Typography scales down.
+   ------------------------------------------------------------- */
+@media (max-width: 575px) {
+  /* Nav brand text slightly smaller */
+  .site-nav .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  /* Hero heading min size */
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  /* Signup banner: tighter vertical padding */
+  .signup-banner {
+    padding: 2rem 0;
+  }
+
+  /* Section vertical padding reduced */
+  .features-section,
+  .why-section,
+  .early-access-section,
+  .bottom-signup {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Section headings min scale */
+  .section-title-wrap h2 {
+    font-size: 1.6rem;
+  }
+  .why-content h2 {
+    font-size: 1.5rem;
+  }
+  .early-access-section h2 {
+    font-size: 1.5rem;
+  }
+  .bottom-signup h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Tech icon diagram: shrink slightly */
+  .tech-icon-html,
+  .tech-icon-pdf {
+    width: 58px;
+    height: 66px;
+    font-size: 1.2rem;
+  }
+  .tech-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  .tech-icon-cpp-small {
+    width: 42px;
+    height: 42px;
+    font-size: 0.75rem;
+  }
+
+  /* Coming-soon strip wraps more naturally */
+  .coming-soon-strip {
+    font-size: 0.78rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Reduced motion preference
+   Disables all entrance animations for users who prefer it.
+   ------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .signup-banner,
+  .features-section .container {
+    animation: none !important;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
