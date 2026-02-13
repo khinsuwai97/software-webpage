@@ -210,15 +210,9 @@ img {
    ------------------------------------------------------------- */
 .hero {
   background-color: var(--clr-bg-dark);
-  /* background: var(--clr-bg-section); */
   position: relative;
   overflow: hidden;
-  padding: 6rem 0 2rem;
-  /* padding: 6rem 0 0; */
-}
-
-.hero .row {
-  min-height: 360px;
+  padding: 6rem 0 0;
 }
 
 .hero-logo-area {
@@ -274,22 +268,32 @@ img {
   font-weight: 300;
 }
 
-/* Hero image */
+/* Hero image — spans from nav through signup banner */
 .hero-image-wrap {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 45%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .hero-image {
   width: 100%;
-  max-width: 480px;
-  height: auto;
+  max-width: 580px;
+  height: 100%;
   object-fit: contain;
+  object-position: right center;
+}
+
+/* Ensure text content stays above image */
+.hero > .container {
   position: relative;
-  top: -20px;
-  right: -40px;
+  z-index: 2;
 }
 
 /* -------------------------------------------------------------
@@ -297,8 +301,10 @@ img {
    ------------------------------------------------------------- */
 .signup-banner {
   background: linear-gradient(to right, #8e608e 0%, #402640 71%, #371a34 100%);
-  padding: 3.5rem 0;
+  padding: 2.5rem 0;
   position: relative;
+  width: 100%;
+  z-index: 2;
 }
 
 .signup-banner h2 {
@@ -699,7 +705,7 @@ img {
   .hero-content {
     animation: fadeUp 0.6s ease both;
   }
-  .signup-banner {
+  .hero .signup-banner {
     animation: fadeUp 0.6s 0.1s ease both;
   }
   .features-section .container {

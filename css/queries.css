@@ -32,9 +32,8 @@
    Two-column layout is active. Minor spacing tweaks only.
    ------------------------------------------------------------- */
 @media (max-width: 1199px) {
-  .hero-image {
-    max-width: 400px;
-    right: -20px;
+  .hero-image-wrap {
+    width: 40%;
   }
 }
 
@@ -44,14 +43,7 @@
    ------------------------------------------------------------- */
 @media (max-width: 991px) {
   .hero-image-wrap {
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .hero-image {
-    max-width: 350px;
-    right: 0;
-    top: 0;
+    display: none;
   }
 
   .hero {
@@ -77,14 +69,6 @@
   /* Hero */
   .hero {
     padding: 2rem 0 2rem;
-  }
-
-  /* Hero image stacks below text */
-  .hero-image {
-    max-width: 300px;
-    right: 0;
-    top: 0;
-    margin: 0 auto;
   }
 
   /* Signup form: stack input above button */
@@ -203,7 +187,7 @@
    ------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   .hero-content,
-  .signup-banner,
+  .hero .signup-banner,
   .features-section .container {
     animation: none !important;
   }
