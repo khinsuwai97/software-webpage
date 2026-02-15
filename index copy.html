@@ -88,126 +88,125 @@
         </ul>
       </div>
     </nav> -->
-    <!-- 
-  KEY STRUCTURAL CHANGE: 
-  Wrap nav + hero in a single parent container so the image 
-  can span from the nav through the signup banner.
--->
-    <div class="hero-wrapper">
-      <!-- The image lives here — spanning the entire wrapper -->
+    <nav
+      class="site-nav navbar navbar-expand-lg navbar-dark"
+      aria-label="Main navigation"
+    >
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img
+            src="images/logos/LOGO.svg"
+            alt="Iron Software"
+            class="nav-logo"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-4">
+            <li class="nav-item">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Career</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO + SIGN-UP BANNER (combined)
+         ============================================================ -->
+    <section class="hero" aria-label="Hero and early-access sign-up">
+      <!-- Image spanning nav, hero, and signup banner -->
       <div class="hero-image-wrap">
         <img
-          src="images/IMAGE-1.svg"
+          src="images/IMAGE.svg"
           alt="C++ file icon with decorative geometric shapes"
           class="hero-image"
         />
       </div>
 
-      <nav
-        class="site-nav navbar navbar-expand-lg navbar-dark"
-        aria-label="Main navigation"
-      >
-        <div class="container-fluid">
-          <a href="#" class="navbar-brand">
-            <img
-              src="images/logos/LOGO.svg"
-              alt="Iron Software"
-              class="nav-logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-            aria-controls="mainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-4">
-              <li class="nav-item">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Products
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Career</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- HERO + SIGN-UP BANNER -->
-      <section class="hero" aria-label="Hero and early-access sign-up">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="hero-content">
-                <div class="hero-logo-area">
-                  <span class="logo-mark-small" aria-hidden="true">
-                    <img src="images/PDF.svg" alt="pdf" />
-                  </span>
-                  <span class="hero-logo-iron">
-                    <strong>IRON</strong
-                    ><span style="color: var(--clr-accent-pink)">PDF</span>
-                    <small>for C++</small>
-                  </span>
-                </div>
-                <p class="hero-subtitle">
-                  Building on the success of IronPDF for .NET
-                </p>
-                <h1 class="hero-title">
-                  Beta Software Program<br />
-                  <span class="title-highlight">IronPDF for C++</span>
-                </h1>
-                <p class="hero-coming-soon">Coming soon</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="hero-content">
+              <div class="hero-logo-area">
+                <span class="logo-mark-small" aria-hidden="true">
+                  <img src="images/PDF.svg" alt="pdf" />
+                </span>
+                <span class="hero-logo-iron"
+                  ><strong>IRON</strong
+                  ><span style="color: var(--clr-accent-pink)">PDF</span>
+                  <small>for C++</small>
+                </span>
               </div>
+              <p class="hero-subtitle">
+                Building on the success of IronPDF for .NET
+              </p>
+              <h1 class="hero-title">
+                Beta Software Program<br />
+                <span class="title-highlight">IronPDF for C++</span>
+              </h1>
+              <p class="hero-coming-soon">Coming soon</p>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="signup-banner">
-          <div class="container">
-            <h2>Be one of the first</h2>
-            <p>Sign up NOW to get early access!</p>
-            <form class="signup-form" action="#" method="post">
-              <label for="email-banner" class="visually-hidden"
-                >Email address</label
-              >
-              <input
-                type="email"
-                id="email-banner"
-                class="form-control"
-                placeholder="Enter email adress"
-                required
-              />
-              <button type="submit" class="btn-signup">Sign up now</button>
-            </form>
-            <div class="coming-soon-strip">
-              <span class="coming-soon-tag"># Coming Soon</span>
-              IronPDF Beta Program also coming soon for
-              <span class="lang-highlight">Python</span> |
-              <span class="lang-highlight">Node.JS</span> |
-              <span class="lang-highlight">Java</span>
-            </div>
+      <div class="signup-banner">
+        <div class="container">
+          <h2>Be one of the first</h2>
+          <p>Sign up NOW to get early access!</p>
+
+          <form class="signup-form" action="#" method="post">
+            <label for="email-banner" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              type="email"
+              id="email-banner"
+              class="form-control"
+              placeholder="Enter email adress"
+              required
+            />
+            <button type="submit" class="btn-signup">Sign up now</button>
+          </form>
+
+          <div class="coming-soon-strip">
+            <span class="coming-soon-tag"># Coming Soon</span>
+            IronPDF Beta Program also coming soon for
+            <span class="lang-highlight">Python</span> |
+            <span class="lang-highlight">Node.JS</span> |
+            <span class="lang-highlight">Java</span>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- END .hero-wrapper -->
+      </div>
+    </section>
+
     <!-- ============================================================
          FEATURES SECTION
          ============================================================ -->
@@ -215,22 +214,20 @@
       <div class="container">
         <div class="section-title-wrap">
           <h2>IronPDF for C++</h2>
-          <img src="images/coming-soon.svg" alt="Coming Soon" class="badge-coming-soon" />
+          <span class="badge-coming-soon">Coming<br />Now</span>
         </div>
 
         <ul class="feature-list">
-          <li class="feature-item"><span class="feature-hash">#</span> Generate PDFs from HTML in C++</li>
+          <li class="feature-item">Generate PDFs from HTML in C++</li>
           <li class="feature-item">
-            <span class="feature-hash">#</span> Combine, split, and modify PDFs quickly in C++
+            Combine, split, and modify PDFs quickly in C++
           </li>
           <li class="feature-item">
-            <span class="feature-hash">#</span> Extract text and images from PDFs using C++
+            Extract text and images from PDFs using C++
           </li>
         </ul>
-        </div>
 
         <div class="feature-description">
-          <div class="container">
           <p>
             The new <strong>IronPDF library for C++</strong> will enhance the
             C++ developer's tool set with robust PDF generation and conversion
@@ -244,7 +241,6 @@
             with speed, precision, control, and excellence.
           </p>
         </div>
-        </div>
       </div>
     </section>
 
@@ -257,11 +253,15 @@
           <!-- Left: icon diagram -->
           <div class="col-md-4">
             <div class="why-icon-group">
-              <img
-                src="images/GroupHTML+PDF.svg"
-                alt="HTML to PDF conversion diagram"
-                class="why-icon-diagram"
-              />
+              <div class="tech-icon-badge tech-icon-html">
+                5
+                <span class="ext-label">.HTML</span>
+              </div>
+              <div class="tech-arrow">C</div>
+              <div class="tech-icon-badge tech-icon-pdf">
+                <span style="font-size: 1rem">&#x1F4C4;</span>
+                <span class="ext-label">.PDF</span>
+              </div>
             </div>
           </div>
 
